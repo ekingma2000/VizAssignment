@@ -1,11 +1,51 @@
 import csv 
 import matplotlib.pyplot as plt
+import numpy as np
  
-ausGold = 0, ausSilver = 0, ausBronze = 0, aut = 0, bel = 0, blr = 0, bul = 0, can = 0, chn = 0, cro = 0, cze= 0, esp= 0
-est= 0, eua= 0, eun= 0, fin= 0, fra= 0, frg= 0, gbr= 0, gdr= 0, ger = 0, hun= 0, ita= 0
-jpn= 0, kaz= 0, kor= 0, lat = 0, lie= 0, lux= 0, ned= 0, nor= 0, pol= 0, rou= 0, rus= 0
-slo= 0, sui = 0, swe= 0, tch= 0, ukr= 0, urs= 0, usa= 0, yug= 0, nzl =0, prk=0, svk =0
-uzb = 0
+ausGold=[]
+autGold=[]
+belGold=[]
+blrGold=[] 
+bulGold=[]
+canGold=[]
+chnGold=[]
+croGold=[] 
+czeGold=[]
+espGold=[]
+estGold=[]
+eunGold=[]
+finGold=[] 
+fraGold=[]
+frgGold=[]
+gbrGold=[] 
+gdrGold=[] 
+gerGold=[]
+hunGold=[]
+itaGold=[] 
+jpnGold=[]
+kazGold=[]
+korGold=[]
+latGold=[]
+lieGold=[]
+luxGold=[]
+nedGold=[]
+polGold=[]
+rouGold=[] 
+rusGold=[] 
+sloGold=[]
+suiGold=[]
+sweGold=[] 
+tchGold=[] 
+ukrGold=[]
+ursGold=[] 
+usaGold=[]
+yugGold=[]
+nzlGold=[]
+prkGold=[] 
+svkGold=[] 
+uzbGold=[] 
+norGold=[]
+euaGold=[]
 
 categories = []
 
@@ -24,134 +64,223 @@ with open('winterOlympicsMen - Sheet1.csv') as csvfile:
 			if (row[7] == "Gold" and row[4] == "AUS"):
 				ausGold += 1 
 
-			elif (row[7] == "Silver" and row[4] == "AUS"):
-				ausSilver += 1 
+			elif (row[7] == "Gold" and row[4] == "AUT"):
+				autGold += 1 
 
-			elif (row[7] == "Bronze" and row[4] == "AUS"):
-				ausBronze += 1 
+			elif (row[7] == "Gold" and row[4] == "BEL"):
+				belGold += 1 
+	
+			elif (row[7] == "Gold" and row[4] == "BLR"):
+				blrGold += 1 
 
-			elif (row[4] == "AUT"):
-				aut += 1 
+			elif (row[7] == "Gold" and row[4] == "BUL"):
+				bulGold += 1
+		
+			elif (row[7] == "Gold" and row[4] == "CAN"):
+				canGold += 1 
 
-			elif (row[4] == "BEL"):
-				bel += 1 
+			elif (row[7] == "Gold" and row[4] == "CHN"):
+				chnGold += 1 
 
-			elif (row[4] == "BLR"):
-				blr += 1 
+			elif (row[7] == "Gold" and row[4] == "CRO"):
+				croGold += 1 
 
-			elif (row[4] == "BUL"):
-				bul += 1 
+			elif (row[7] == "Gold" and row[4] == "CZN"):
+				cznGold += 1
 
-			elif (row[4] == "CAN"):
-				can += 1 
 
-			elif (row[4] == "CHN"):
-				chn += 1 
+			elif (row[7] == "Gold" and row[4] == "ESP"):
+				espGold += 1 
 
-			elif (row[4] == "CRO"):
-				cro += 1 
 
-			elif (row[4] == "CZN"):
-				cze += 1 
+			elif (row[7] == "Gold" and row[4] == "EST"):
+				estGold += 1 
 
-			elif (row[4] == "ESP"):
-				esp += 1 
 
-			elif (row[4] == "EST"):
-				est += 1 
+			elif (row[7] == "Gold" and row[4] == "EUA"):
+				euaGold += 1 
 
-			elif (row[4] == "EUA"):
-				eua += 1 
 
-			elif (row[4] == "EUN"):
-				eun += 1 
+			elif (row[7] == "Gold" and row[4] == "EUN"):
+				eunGold += 1 
 
-			elif (row[4] == "FIN"):
-				fin += 1 
 
-			elif (row[4] == "FRA"):
-				fra += 1 
+			elif (row[7] == "Gold" and row[4] == "FIN"):
+				finGold += 1 
 
-			elif (row[4] == "FRG"):
-				frg += 1 
 
-			elif (row[4] == "GBR"):
-				gbr += 1 
+			elif (row[7] == "Gold" and row[4] == "FRA"):
+				fraGold += 1 
+	
+			elif (row[7] == "Gold" and row[4] == "FRG"):
+				frgGold += 1 
 
-			elif (row[4] == "GER"):
-				ger += 1 
 
-			elif (row[4] == "HUN"):
-				hun += 1 
+			elif (row[7] == "Gold" and row[4] == "GBR"):
+				gbrGold += 1 
 
-			elif (row[4] == "ITA"):
-				ita += 1 
 
-			elif (row[4] == "JPN"):
-				jpn += 1 
+			elif (row[7] == "Gold" and row[4] == "GER"):
+				gerGold += 1 
 
-			elif (row[4] == "KAZ"):
-				kaz += 1 
 
-			elif (row[4] == "KOR"):
-				kor += 1 
+			elif (row[7] == "Gold" and row[4] == "HUN"):
+				hunGold += 1 
 
-			elif (row[4] == "LAT"):
-				lat += 1 
+			elif (row[7] == "Gold" and row[4] == "ITA"):
+				itaGold += 1 
 
-			elif (row[4] == "LIE"):
-				lie += 1 
 
-			elif (row[4] == "LUX"):
-				lux += 1 
+			elif (row[7] == "Gold" and row[4] == "JPN"):
+				jpnGold += 1
 
-			elif (row[4] == "NED"):
-				ned += 1 
 
-			elif (row[4] == "NOR"):
-				nor += 1 
+			elif (row[7] == "Gold" and row[4] == "KAZ"):
+				kazGold += 1
 
-			elif (row[4] == "POL"):
-				pol += 1 
 
-			elif (row[4] == "ROU"):
-				rou+= 1 
+			elif (row[7] == "Gold" and row[4] == "KOR"):
+				korGold += 1  
 
-			elif (row[4] == "RUS"):
-				rus += 1 
 
-			elif (row[4] == "SLO"):
-				slo += 1 
+			elif (row[7] == "Gold" and row[4] == "LAT"):
+				latGold += 1
 
-			elif (row[4] == "SUI"):
-				sui += 1 
 
-			elif (row[4] == "SWE"):
-				swe += 1 
+			elif (row[7] == "Gold" and row[4] == "LIE"):
+				lieGold += 1 
 
-			elif (row[4] == "TCH"):
-				tch += 1 
 
-			elif (row[4] == "UKR"):
-				ukr += 1 
+			elif (row[7] == "Gold" and row[4] == "LUX"):
+				luxGold += 1 
 
-			elif (row[4] == "URS"):
-				urs += 1 
 
-			elif (row[4] == "USA"):
-				usa += 1 
+			elif (row[7] == "Gold" and row[4] == "NED"):
+				nedGold += 1
 
-			elif (row[4] == "YUG"):
-				yug += 1 
 
-			elif (row[4] == "NZL"):
-				nzl += 1 
+			elif (row[7] == "Gold" and row[4] == "NOR"):
+				norGold += 1 
 
-			elif (row[4] == "SVK"):
-				svk += 1 
+			elif (row[7] == "Gold" and row[4] == "POL"):
+				polGold += 1 
+		
+			elif (row[7] == "Gold" and row[4] == "ROU"):
+				rouGold += 1 
 
-			elif (row[4] == "UZB"):
-				uzb += 1 
+			elif (row[7] == "Gold" and row[4] == "RUS"):
+				rusGold += 1 
+
+
+			elif (row[7] == "Gold" and row[4] == "SLO"):
+				sloGold += 1
+
+
+			elif (row[7] == "Gold" and row[4] == "SUI"):
+				suiGold += 1 
+
+
+			elif (row[7] == "Gold" and row[4] == "SWE"):
+				sweGold += 1 
+
+
+			elif (row[7] == "Gold" and row[4] == "TCH"):
+				tchGold += 1 
+	
+
+			elif (row[7] == "Gold" and row[4] == "UKR"):
+				ukrGold += 1 
+
+
+			elif (row[7] == "Gold" and row[4] == "URS"):
+				ursGold += 1
+ 
+
+			elif (row[7] == "Gold" and row[4] == "USA"):
+				usaGold += 1 
+
+
+			elif (row[7] == "Gold" and row[4] == "YUG"):
+				yugGold += 1 
+
+
+			elif (row[7] == "Gold" and row[4] == "NZL"):
+				nzlGold += 1 
+
+
+			elif (row[7] == "Gold" and row[4] == "SVK"):
+				svkGold += 1 
+
+
+			elif (row[7] == "Gold" and row[4] == "UZB"):
+				uzbGold += 1
+
+			
 
 # Chart
+
+golds = (ausGold, autGold, belGold, canGold, chnGold, croGold, czeGold, espGold, estGold,euaGold,eunGold,
+finGold ,fraGold ,frgGold,gbrGold ,gdrGold,gerGold,hunGold,itaGold,jpnGold,kazGold ,korGold,latGold,
+lieGold,luxGold ,nedGold,norGold,polGold,rouGold,rusGold,suiGold,sweGold,tchGold,ukrGold,ursGold, 
+usaGold ,yugGold,nzlGold,prkGold,svkGold,uzbGold)
+
+bars = ('AUS', 'AUT', 'bel','blr', 'bul','can','chn',
+'cro', 'cze','esp','est','eua','eun','fin', 'fra','frg','gbr','gdr','ger','hun','ita', 'jpn','kaz', 
+'kor','lat', 'lie','lux','ned','nor','pol','rou','rus','slo','sui','swe','tch', 'ukr','urs', 'usa', 
+'yug','nzl', 'prk','svk','uzb')
+height = [len(ausGold), len(autGold), len(belGold), len(canGold), len(chnGold), len(croGold), 
+len(czeGold), len(espGold), len(estGold),len(euaGold),len(eunGold),len(finGold) ,len(fraGold) ,
+len(frgGold), len(gbrGold) ,len(gdrGold), len(gerGold),len(hunGold),len(itaGold),len(jpnGold),
+len(kazGold) ,len(korGold),len(latGold),len(lieGold),len(luxGold) ,len(nedGold),len(norGold),
+len(polGold),len(rouGold),len(rusGold),len(suiGold),len(sweGold),len(tchGold),len(ukrGold),
+len(ursGold), len(usaGold) ,len(yugGold),len(nzlGold),len(prkGold),len(svkGold),len(uzbGold)]
+
+y_pos = np.arange(len(bars))
+plt.bar(y_pos, height, color=("gold"))
+plt.xticks(y_pos, bars)
+
+plt.title("Medals for Canadian Men's Hockey")
+plt.xlabel("Medals from 1924 - 2014")
+plt.show()
+
+
+#plt.bar (r1, bar1, color='gold', width=barWidth, label='gold')
+#plt.bar (r2, bar2, color='silver', width=barWidth, label='silver')
+#plt.bar (r3, bar3, color='darkgoldenrod', width=barWidth, label='bronze')
+
+#plt.xlabel('countries')
+#plt.xticks([r + barWidth for r in range(len(bar1))], ['AUS', 'AUT', 'bel','blr', 'bul','can','chn',
+#'cro', 'cze','esp','est','eua','eun','fin', 'fra','frg','gbr','gdr','ger','hun','ita', 'jpn','kaz', 
+#'kor','lat', 'lie','lux','ned','nor','pol','rou','rus','slo','sui','swe','tch', 'ukr','urs', 'usa', 
+#'yug','nzl', 'prk','svk','uzb',])
+
+#plt.legend()
+#plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -45,3 +45,4 @@ plt.xticks(y_pos, bars)
 plt.title("Medals for Canadian Men's Hockey")
 plt.xlabel("Medals from 1924 - 2014")
 plt.show()
+
