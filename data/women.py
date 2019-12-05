@@ -1,17 +1,17 @@
 import csv 
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
 
-ausGold=0 
-ausSilver=0 
-ausBronze=0
-
+nor=0
+can=0
+fin=0 
+urs=0 
+usa=0
 
 
 categories = []
 
-with open('winterOlympicsMen - Sheet1.csv') as csvfile:
+with open('winterOlympicsWomen - Sheet1.csv') as csvfile:
 	reader = csv.reader(csvfile)
 
 	line_count = 0
@@ -23,23 +23,39 @@ with open('winterOlympicsMen - Sheet1.csv') as csvfile:
 			line_count += 1
 
 		else:
-			if (row[7] == "Gold" and row[4] == "AUS"):
-				ausGold += 1 
-			elif (row[7] == "Silver" and row[4] == "AUS"):
-				ausSilver += 1 
-			elif (row[7] == "Bronze" and row[4] == "AUS"):
-				ausBronze += 1 
+			if (row[7] == "Gold" and row[4] == "CAN"):
+				can += 1 
 
-medals = [ausGold, ausSilver, ausBronze]
 
-df = pd.DataFrame({'group':list(map(chr, range(65, 85))), 'values':np.random.uniform(size=3) })
+			elif (row[7] == "Gold" and row[4] == "FIN"):
+				fin += 1 
+
+
+			elif (row[7] == "Gold" and row[4] == "NOR"):
+				nor += 1 
+
+
+			elif (row[7] == "Gold" and row[4] == "URS"):
+				urs += 1
  
-# Reorder it following the values:
-ordered_df = df.sort_values(by='values')
-my_range=range(1,len(df.index)+1)
- 
-# Make the plot
-plt.stem(ordered_df['values'])
-plt.xticks( my_range, ordered_df['group'])
 
+			elif (row[7] == "Gold" and row[4] == "USA"):
+				usa += 1 
+
+
+# Make a fake dataset:
+height = [can, fin, nor, urs, usa]
+
+bars = ('CAN','FIN','NOR','URS', 'USA')
+
+y_pos = np.arange(len(bars))
+ 
+# Create bars
+plt.bar(y_pos, height, color='gold')
+ 
+# Create names on the x-axis
+plt.xticks(y_pos, bars)
+plt.title("Women's Gold Medals in the Top 5 Countries")
+ 
+# Show graphic
 plt.show()

@@ -36,11 +36,10 @@ print("silver medals: ", len(silvers))
 print("bronze medals: ", len(bronzes))
 
 #plot a bar chart
-bars = ('Gold', 'Silver','Bronze')
-height = [len(golds), len(silvers), len(bronzes)]
-y_pos = np.arange(len(bars))
-plt.bar(y_pos, height, color=("gold", "silver", 'darkgoldenrod'))
-plt.xticks(y_pos, bars)
+size=[len(golds), len(silvers), len(bronzes)]
+names='Gold: 81', 'Silver: 20', 'Bronze: 0'
+
+plt.pie(size, labels=names, colors=('gold', 'silver', 'darkgoldenrod'))
 
 plt.title("Medals for Canadian Women's Hockey")
 plt.xlabel("Medals from 1998 - 2014")
