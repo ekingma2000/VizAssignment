@@ -1,0 +1,45 @@
+charset "UTF-8"
+
+.hidden{
+	display: none;
+}
+
+
+.header {
+	margin-right: 70px;
+	margin-left: 150px;
+	height: 100px;
+	width: 1500px;
+	background-color: green;
+	text-align: center;
+	font-size: 20px;
+}
+.graphAlignment1 {
+	margin-top: 200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-right: 300px;
+	font-size: 20px;
+
+}
+
+
+.graphAlignment2 {
+	margin-top: 120px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+	margin-left: 150px;
+	margin-right: 150px;
+	font-size: 20px;
+}
+
+.graphAlignment3 {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-right: 300px;
+	margin-left: 150px;
+	font-size: 20px;
